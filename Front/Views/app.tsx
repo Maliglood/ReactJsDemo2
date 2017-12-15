@@ -1,4 +1,5 @@
 ﻿import * as React from "react";
+import { CurrentTimeView } from "./currentTime";
 
 export interface AppProps { innerHtml: string; buttonText: string; }
 export interface AppState { buttonText: string; }
@@ -15,11 +16,17 @@ export class AppView extends React.Component<AppProps, AppState> {
     press() {
         this.setState({ buttonText: "You clicked button" });
     }
+    componentDidMount() {
+        let currentTimeView = new CurrentTimeView();
+        currentTimeView.render(document.getElementById("current-time"));
+    }
     render() {
         return <div className="page-header">
             <div>{this.props.innerHtml}</div>
             <button onClick={this.press}>{this.state.buttonText}</button>
+            <div id="current-time"></div>
             <div id="books-list"></div>
+            <div id="todo-item"></div>
         </div>;
     }
 }

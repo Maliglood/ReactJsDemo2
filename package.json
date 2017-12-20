@@ -13,15 +13,17 @@
     "source-map-loader": "0.2.3"
   },
   "dependencies": {
-    "reflect-metadata": "^0.1.8",
+    "core-js": "^2.4.1",
     "es6-promise": "^3.0.2",
     "es6-shim": "^0.33.3",
-    "systemjs": "0.19.40",
-    "core-js": "^2.4.1",
-    "rxjs": "5.0.1",
-    "zone.js": "^0.8.4",
     "react": "16.0.0",
     "react-dom": "16.0.0",
-    "react-table": "6.7.4"
+    "react-simpletabs": "^0.7.0",
+    "react-table": "6.7.4",
+    "react-tabs": "^2.1.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.1",
+    "systemjs": "0.19.40",
+    "zone.js": "^0.8.4"
   }
 }

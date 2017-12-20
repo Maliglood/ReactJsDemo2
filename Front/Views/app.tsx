@@ -1,4 +1,5 @@
 ﻿import * as React from "react";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { CurrentTimeView } from "./currentTime";
 
 export interface AppProps { innerHtml: string; buttonText: string; }
@@ -21,12 +22,29 @@ export class AppView extends React.Component<AppProps, AppState> {
         currentTimeView.render(document.getElementById("current-time"));
     }
     render() {
-        return <div className="page-header">
-            <div>{this.props.innerHtml}</div>
-            <button onClick={this.press}>{this.state.buttonText}</button>
-            <div id="current-time"></div>
-            <div id="books-list"></div>
-            <div id="todo-item"></div>
-        </div>;
+        return <Tabs className="page-header">
+            <TabList>
+                <Tab>Button</Tab>
+                <Tab>Todo List</Tab>
+                <Tab>Current Time</Tab>
+            </TabList>
+
+            <TabPanel>
+                <h2>
+                    <div>{this.props.innerHtml}</div>
+                    <button onClick={this.press}>{this.state.buttonText}</button>
+                </h2>
+            </TabPanel>
+            <TabPanel>
+                <h2>
+                    <div id="todo-item"></div>
+                </h2>
+            </TabPanel>
+            <TabPanel>
+                <h2>
+                    <div id="current-time"></div>
+                </h2>
+            </TabPanel>
+        </Tabs>;
     }
 }

@@ -1,5 +1,6 @@
 ﻿import * as React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {Main as TodoItemView} from "./todoItem";
 import { CurrentTimeView } from "./currentTime";
 
 export interface AppProps { innerHtml: string; buttonText: string; }
@@ -36,9 +37,7 @@ export class AppView extends React.Component<AppProps, AppState> {
                 </h2>
             </TabPanel>
             <TabPanel>
-                <h2>
-                    <div id="todo-item"></div>
-                </h2>
+                <TodoItemView/>
             </TabPanel>
             <TabPanel>
                 <h2>

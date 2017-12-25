@@ -21,6 +21,7 @@
     "react-simpletabs": "^0.7.0",
     "react-table": "6.7.4",
     "react-tabs": "^2.1.1",
+    "react-modal": "3.1.10",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",

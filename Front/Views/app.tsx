@@ -1,7 +1,9 @@
 ﻿import * as React from "react";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import {Main as TodoItemView} from "./todoItem";
+import {ModalView} from "./modalView";
 import { CurrentTimeView } from "./currentTime";
+import {Tab, TabPanel} from "../../typings/react-tabs/index";
 
 export interface AppProps { innerHtml: string; buttonText: string; }
 export interface AppState { buttonText: string; }
@@ -27,6 +29,7 @@ export class AppView extends React.Component<AppProps, AppState> {
             <TabList>
                 <Tab>Button</Tab>
                 <Tab>Todo List</Tab>
+                <Tab>Modal</Tab>
                 <Tab>Current Time</Tab>
             </TabList>
 
@@ -38,6 +41,9 @@ export class AppView extends React.Component<AppProps, AppState> {
             </TabPanel>
             <TabPanel>
                 <TodoItemView/>
+            </TabPanel>
+            <TabPanel>
+                <ModalView/>
             </TabPanel>
             <TabPanel>
                 <h2>

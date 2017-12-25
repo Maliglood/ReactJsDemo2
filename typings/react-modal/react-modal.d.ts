@@ -3,8 +3,16 @@
 // Definitions by: Rajab Shakirov <https://github.com/radziksh>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 /// <reference path="../react/react.d.ts"/>
-declare module "react-modal" {
-    interface ReactModal {
+export declare module "react-modal" {
+    export interface Style {
+        color: string;
+    }
+
+    export interface Subtitle {
+        style: Style;
+    }
+
+    export interface ReactModal {
         isOpen: boolean;
         style?: {
             content: {

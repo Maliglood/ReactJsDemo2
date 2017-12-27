@@ -59,7 +59,8 @@ export class Main extends React.Component<IMainProps, IMainState> {
         return (
             <div>
                 <div>
-                    <input type="text" placeholder="input new item" value={this.state.newItem.description} onChange={this.changeName} />
+                    <input type="text" placeholder="input new item"
+                           value={this.state.newItem.description} onChange={this.changeName} />
                     <button onClick={this.addItem} >add</button>
                 </div>
                 <ul>{todoItems}</ul>
